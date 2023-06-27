@@ -1,4 +1,4 @@
-name: Push a new tag with minor update
+name: Push a new tag with patch update
 
 on:
   push:
