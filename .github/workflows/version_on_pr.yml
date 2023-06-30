@@ -1,16 +1,14 @@
 name: Bump patch version
 
 on:
-  push:
-    branch:
-      - main
-  pull_request:
-    types: [closed]
+  pull_request_target:
+    types:
+      - closed
 
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.merged == true }}
+    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v2
 
