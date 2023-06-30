@@ -8,9 +8,9 @@ on:
     types: [closed]
 
 jobs:
-  if: ${{ github.event.pull_request.merged == true }}
   release:
     runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.merged == true }}
     steps:
       - uses: actions/checkout@v2
 
