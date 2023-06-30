@@ -2,7 +2,8 @@ name: Bump patch version
 
 on:
   push:
-    - main
+    branch:
+      - main
   pull_request:
     types: [closed]
 
